@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Welcome to GAURDIAN!</title>
+<title>Welcome to GUARDIAN!</title>
 <style>
 body{
 background-color:black;
@@ -18,11 +18,11 @@ color:white;
 font-size:25px;
 background-color:black;
 border-style:solid;
-border-width:5px;
+border-width:3px;
 border-color:white;
 width:85%;
 text-align:center;
-padding-top:20px;
+padding:10px;
 }
 #namearea{
 margin-top:4%;
@@ -30,7 +30,7 @@ color:white;
 font-size:25px;
 background-color:black;
 border-style:solid;
-border-width:5px;
+border-width:3px;
 border-color:white;
 width:85%;
 text-align:center;
@@ -46,6 +46,7 @@ color:red;
 background-color:black;
 font-size:25px;
 text-align:center;
+border-width:5px;
 width:50%;
 border-style:solid;
 border-color:red;
@@ -63,13 +64,18 @@ frm.name.value="";
 check=false;
 }
 }
+window.history.forward();
+function noback()
+{
+window.history.forward();
+}
 </script>
 </head>
-<body>
+<body onload="noback();"  onpageshow="if(event.persisted){noback();}">
 <?php
 $mac=$_POST["mac"];
 ?>
-<p id="title">GAURDIAN</p>
+<p id="title">GUARDIAN</p>
 <div id="img1" style="text-align:center;margin-top:-20px">
 <img src="1.png" />
 </div>
