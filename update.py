@@ -10,7 +10,7 @@ try:
 	buf=buf.rstrip('\n')
 	if buf.find('www.')==0 :
                 print buf
-                buf=buf.slice[4:]
+                buf=buf[4:]
         print buf
 	cursor.execute("select * from blacklist")
 	row=cursor.fetchone()
@@ -21,13 +21,13 @@ try:
 		buf=buf.rstrip('\n')
 		if buf.find('www.')==0 :
                         print buf
-                        buf=buf.slice[4:]
+                        buf=buf[4:]
                 print buf
 		
 	buf=fp2.readline()
 	if buf.find('www.')==0 :
                 print buf
-                buf=buf.slice[4:]
+                buf=buf[4:]
         print buf
 	while buf:
 		cursor.execute('INSERT INTO blacklist VALUES("%s")' % buf)
@@ -35,7 +35,7 @@ try:
 		buf=buf.rstrip('\n')
 		if buf.find('www.')==0 :
                         print buf
-                        buf=buf.slice[4:]
+                        buf=buf[4:]
                 print buf
 	cursor.close()
 	conn.commit()
